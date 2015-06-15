@@ -22,4 +22,15 @@ public class Receipt {
         }
         return totalPrice;
     }
+
+    @Override
+    public String toString() {
+        String formattedString = new String();
+        for(Item item : items) {
+            formattedString += item + "\n";
+        }
+        formattedString += "Sales Tax : " + totalSalesTax() + "\n";
+        formattedString += "Total : " + totalPrice() + "\n";
+        return formattedString;
+    }
 }

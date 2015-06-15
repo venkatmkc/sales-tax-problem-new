@@ -33,4 +33,16 @@ public class ReceiptTest {
 
         assertThat(actualTotalPrice, is(35.75));
     }
+
+    @Test
+    public void shouldProduceFormattedReceipt() {
+        ArrayList<Item> items = new ArrayList<>();
+        Item item = new Item(1, "music Cd", 12.5);
+        items.add(item);
+        Receipt receipt = new Receipt(items);
+
+        String actualReceipt = receipt.toString();
+
+        assertThat(actualReceipt, is("1 music Cd : 12.5\nSales Tax : 1.25\nTotal : 13.75\n"));
+    }
 }
