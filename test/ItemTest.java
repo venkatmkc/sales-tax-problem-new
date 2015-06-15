@@ -22,4 +22,12 @@ public class ItemTest {
         assertThat(actualFormattedItem, is("1 music Cd : 12.5"));
     }
 
+    @Test
+    public void shouldProduceNetPrice() {
+        Item item = new Item(1, "music Cd", 12.5);
+
+        double actualNetPrice = item.netPrice();
+
+        assertThat(actualNetPrice, is(13.75));
+    }
 }

@@ -17,4 +17,8 @@ public class Item {
     public String toString() {
         return "" + quantity + " " + name + " : " + price;
     }
+
+    public double netPrice() {
+        return price + salesTax();
+    }
 }
