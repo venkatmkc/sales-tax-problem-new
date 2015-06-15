@@ -14,4 +14,12 @@ public class Receipt {
         }
         return totalSalesTax;
     }
+
+    public double totalPrice() {
+        double totalPrice = 0;
+        for(Item item : items) {
+            totalPrice += item.netPrice();
+        }
+        return totalPrice;
+    }
 }
