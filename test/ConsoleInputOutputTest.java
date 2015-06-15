@@ -21,16 +21,16 @@ public class ConsoleInputOutputTest {
         assertThat(actualUserInput, is("1 music Cd at 12.5"));
     }
 
-  /*  @Test
+    @Test
     public void outputShouldBeDisplayedToTheUser() {
         ByteArrayOutputStream outputStreamContent = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStreamContent));
         Scanner consoleInput = new Scanner(System.in);
         ConsoleInputOutput consoleInputOutput = new ConsoleInputOutput(consoleInput);
 
-        consoleInputOutput.displayOutputToUser(Messages.WELCOME_MESSAGE);
+        consoleInputOutput.displayOutputToUser("output");
         String actualOutputToUser = outputStreamContent.toString();
 
-        assertThat(actualOutputToUser, is(Messages.WELCOME_MESSAGE + "\n"));
-    }*/
+        assertThat(actualOutputToUser, is("output\n"));
+    }
 }
