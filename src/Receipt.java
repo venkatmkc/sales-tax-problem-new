@@ -29,7 +29,11 @@ public class Receipt {
         for(Item item : items) {
             formattedString += item + "\n";
         }
-        formattedString += "Sales Tax : " + totalSalesTax() + "\n";
+        double totalSalesTax = totalSalesTax();
+        totalSalesTax /= 5;
+        Math.round(totalSalesTax);
+        totalSalesTax *= 5;
+        formattedString += "Sales Tax : " + totalSalesTax + "\n";
         formattedString += "Total : " + totalPrice() + "\n";
         return formattedString;
     }
