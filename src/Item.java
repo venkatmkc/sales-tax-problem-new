@@ -10,6 +10,6 @@ public class Item {
     }
 
     public double salesTax() {
-        return 0;
+        return (price * 10) / 100;
     }
 }
