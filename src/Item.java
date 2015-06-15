@@ -12,4 +12,9 @@ public class Item {
     public double salesTax() {
         return (price * 10) / 100;
     }
+
+    @Override
+    public String toString() {
+        return "" + quantity + " " + name + " : " + price;
+    }
 }
